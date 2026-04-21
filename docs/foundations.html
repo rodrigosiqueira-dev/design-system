@@ -1,0 +1,231 @@
+<!doctype html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Foundations</title>
+    <link rel="stylesheet" href="../styles/globals.css" />
+  </head>
+  <body class="bg-base text-base font-sans antialiased min-h-screen flex flex-col">
+    <header class="border-b border-border sticky top-0 bg-base/80 backdrop-blur z-50">
+      <nav class="container navbar" data-navbar>
+        <div class="font-bold text-lg">MyUI Docs</div>
+        
+        <button class="navbar-toggle" type="button" aria-expanded="false" data-navbar-trigger>
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <line x1="4" x2="20" y1="12" y2="12"/><line x1="4" x2="20" y1="6" y2="6"/><line x1="4" x2="20" y1="18" y2="18"/>
+          </svg>
+        </button>
+
+        <div class="navbar-menu" data-state="closed" data-navbar-menu>
+          <a class="btn btn-ghost btn-sm w-full md:w-auto justify-start md:justify-center" href="../index.html">Showcase</a>
+          <a class="btn btn-ghost btn-sm w-full md:w-auto justify-start md:justify-center" href="./foundations.html">Foundations</a>
+          <a class="btn btn-ghost btn-sm w-full md:w-auto justify-start md:justify-center" href="./themes.html">Themes</a>
+        </div>
+      </nav>
+    </header>
+
+    <main class="flex-1 py-10 space-y-10">
+      <section>
+        <article class="container">
+          <div class="mb-6">
+            <h1 class="docs-title">Foundations</h1>
+            <p class="docs-subtitle">
+              Tokens e decisões-base que sustentam o sistema visual.
+            </p>
+          </div>
+        </article>
+      </section>
+
+      <section>
+        <article class="container space-y-12">
+          <!-- Cores Neutras -->
+          <div class="docs-card">
+            <h2 class="font-semibold mb-6 text-lg">Cores Neutras</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+              <div class="space-y-4">
+                <h3 class="text-sm font-medium opacity-60 uppercase tracking-wider">Dark Variantes</h3>
+                <div class="flex gap-4">
+                  <div class="flex flex-col items-center gap-2">
+                    <div class="w-16 h-16 rounded-lg border border-border" style="background: var(--color-neutral-dark-1)"></div>
+                    <span class="text-[10px] font-mono">Dark 1</span>
+                  </div>
+                  <div class="flex flex-col items-center gap-2">
+                    <div class="w-16 h-16 rounded-lg border border-border" style="background: var(--color-neutral-dark-2)"></div>
+                    <span class="text-[10px] font-mono">Dark 2</span>
+                  </div>
+                  <div class="flex flex-col items-center gap-2">
+                    <div class="w-16 h-16 rounded-lg border border-border" style="background: var(--color-neutral-dark-3)"></div>
+                    <span class="text-[10px] font-mono">Dark 3</span>
+                  </div>
+                </div>
+              </div>
+              <div class="space-y-4">
+                <h3 class="text-sm font-medium opacity-60 uppercase tracking-wider">Light Variantes</h3>
+                <div class="flex gap-4">
+                  <div class="flex flex-col items-center gap-2">
+                    <div class="w-16 h-16 rounded-lg border border-border" style="background: var(--color-neutral-light-1)"></div>
+                    <span class="text-[10px] font-mono">Light 1</span>
+                  </div>
+                  <div class="flex flex-col items-center gap-2">
+                    <div class="w-16 h-16 rounded-lg border border-border" style="background: var(--color-neutral-light-2)"></div>
+                    <span class="text-[10px] font-mono">Light 2</span>
+                  </div>
+                  <div class="flex flex-col items-center gap-2">
+                    <div class="w-16 h-16 rounded-lg border border-border" style="background: var(--color-neutral-light-3)"></div>
+                    <span class="text-[10px] font-mono">Light 3</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Cores de Status -->
+          <div class="docs-card">
+            <h2 class="font-semibold mb-6 text-lg">Cores de Status</h2>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+              <!-- Success -->
+              <div class="space-y-3">
+                <h3 class="text-xs font-bold uppercase" style="color: var(--color-success-solid)">Success</h3>
+                <div class="space-y-2">
+                  <div class="flex items-center gap-3 p-2 rounded border border-border bg-surface">
+                    <div class="w-8 h-8 rounded" style="background: var(--color-success-solid)"></div>
+                    <span class="text-xs font-mono">Solid</span>
+                  </div>
+                  <div class="flex items-center gap-3 p-2 rounded border border-border bg-surface">
+                    <div class="w-8 h-8 rounded" style="background: var(--color-success-med)"></div>
+                    <span class="text-xs font-mono">Med</span>
+                  </div>
+                  <div class="flex items-center gap-3 p-2 rounded border border-border bg-surface">
+                    <div class="w-8 h-8 rounded" style="background: var(--color-success-soft)"></div>
+                    <span class="text-xs font-mono">Soft</span>
+                  </div>
+                </div>
+              </div>
+              <!-- Error -->
+              <div class="space-y-3">
+                <h3 class="text-xs font-bold uppercase" style="color: var(--color-error-solid)">Error</h3>
+                <div class="space-y-2">
+                  <div class="flex items-center gap-3 p-2 rounded border border-border bg-surface">
+                    <div class="w-8 h-8 rounded" style="background: var(--color-error-solid)"></div>
+                    <span class="text-xs font-mono">Solid</span>
+                  </div>
+                  <div class="flex items-center gap-3 p-2 rounded border border-border bg-surface">
+                    <div class="w-8 h-8 rounded" style="background: var(--color-error-med)"></div>
+                    <span class="text-xs font-mono">Med</span>
+                  </div>
+                  <div class="flex items-center gap-3 p-2 rounded border border-border bg-surface">
+                    <div class="w-8 h-8 rounded" style="background: var(--color-error-soft)"></div>
+                    <span class="text-xs font-mono">Soft</span>
+                  </div>
+                </div>
+              </div>
+              <!-- Info -->
+              <div class="space-y-3">
+                <h3 class="text-xs font-bold uppercase" style="color: var(--color-info-solid)">Info</h3>
+                <div class="space-y-2">
+                  <div class="flex items-center gap-3 p-2 rounded border border-border bg-surface">
+                    <div class="w-8 h-8 rounded" style="background: var(--color-info-solid)"></div>
+                    <span class="text-xs font-mono">Solid</span>
+                  </div>
+                  <div class="flex items-center gap-3 p-2 rounded border border-border bg-surface">
+                    <div class="w-8 h-8 rounded" style="background: var(--color-info-med)"></div>
+                    <span class="text-xs font-mono">Med</span>
+                  </div>
+                  <div class="flex items-center gap-3 p-2 rounded border border-border bg-surface">
+                    <div class="w-8 h-8 rounded" style="background: var(--color-info-soft)"></div>
+                    <span class="text-xs font-mono">Soft</span>
+                  </div>
+                </div>
+              </div>
+              <!-- Warning -->
+              <div class="space-y-3">
+                <h3 class="text-xs font-bold uppercase" style="color: var(--color-warning-solid)">Warning</h3>
+                <div class="space-y-2">
+                  <div class="flex items-center gap-3 p-2 rounded border border-border bg-surface">
+                    <div class="w-8 h-8 rounded" style="background: var(--color-warning-solid)"></div>
+                    <span class="text-xs font-mono">Solid</span>
+                  </div>
+                  <div class="flex items-center gap-3 p-2 rounded border border-border bg-surface">
+                    <div class="w-8 h-8 rounded" style="background: var(--color-warning-med)"></div>
+                    <span class="text-xs font-mono">Med</span>
+                  </div>
+                  <div class="flex items-center gap-3 p-2 rounded border border-border bg-surface">
+                    <div class="w-8 h-8 rounded" style="background: var(--color-warning-soft)"></div>
+                    <span class="text-xs font-mono">Soft</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Radius e Spacing -->
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <div class="docs-card">
+              <h2 class="font-semibold mb-4 text-lg">Border Radius</h2>
+              <div class="token-list">
+                <div class="token-row">
+                  <span class="token-name">--radius-control</span>
+                  <div class="flex items-center gap-2">
+                    <div class="w-8 h-8 bg-primary rounded-(--radius-control)"></div>
+                    <span class="text-xs opacity-60">0.5rem</span>
+                  </div>
+                </div>
+                <div class="token-row">
+                  <span class="token-name">--radius-surface</span>
+                  <div class="flex items-center gap-2">
+                    <div class="w-8 h-8 bg-primary rounded-(--radius-surface)"></div>
+                    <span class="text-xs opacity-60">1rem</span>
+                  </div>
+                </div>
+                <div class="token-row">
+                  <span class="token-name">--radius-pill</span>
+                  <div class="flex items-center gap-2">
+                    <div class="w-16 h-8 bg-primary rounded-(--radius-pill)"></div>
+                    <span class="text-xs opacity-60">100rem</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="docs-card">
+              <h2 class="font-semibold mb-4 text-lg">Spacing System</h2>
+              <div class="token-list">
+                <div class="token-row"><span class="token-name">--space-2</span><div class="h-2 bg-primary/20 w-8"></div></div>
+                <div class="token-row"><span class="token-name">--space-4</span><div class="h-4 bg-primary/20 w-16"></div></div>
+                <div class="token-row"><span class="token-name">--space-6</span><div class="h-6 bg-primary/20 w-24"></div></div>
+              </div>
+            </div>
+          </div>
+        </article>
+      </section>
+
+      <section>
+        <article class="container docs-grid">
+          <div class="docs-card">
+            <h2 class="font-semibold mb-4">Controls</h2>
+            <div class="space-y-2">
+              <button class="btn btn-primary btn-md">Primary Button</button>
+              <input class="input" placeholder="Input control" />
+            </div>
+          </div>
+
+          <div class="docs-card">
+            <h2 class="font-semibold mb-4">Surfaces</h2>
+            <div class="card">
+              <p class="text-sm opacity-80">Card e modal compartilham `--radius-surface`.</p>
+            </div>
+          </div>
+        </article>
+      </section>
+    </main>
+
+    <footer class="border-t border-border py-8 mt-auto">
+      <div class="container text-center text-sm opacity-60">
+        &copy; 2026 MyUI Design System. Construído com semântica e sem dependências.
+      </div>
+    </footer>
+
+    <script type="module" src="../js/main.js"></script>
+  </body>
+</html>

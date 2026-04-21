@@ -1,0 +1,198 @@
+/* --- Dropdowns --- */
+.dropdown-menu {
+  position: absolute;
+  margin-top: 0.5rem;
+  padding: 0.5rem;
+  border: 1px solid var(--color-border);
+  min-width: 10rem;
+  z-index: 40;
+  border-radius: var(--radius-surface);
+  background: var(--color-surface);
+  box-shadow: var(--shadow-md);
+  transform-origin: top left;
+  transition:
+    opacity 0.2s ease,
+    transform 0.2s ease,
+    display 0.2s ease allow-discrete;
+  opacity: 1;
+  transform: scale(1) translateY(0);
+}
+
+.dropdown-menu[hidden] {
+  display: none;
+  opacity: 0;
+  transform: scale(0.95) translateY(-4px);
+}
+
+@starting-style {
+  .dropdown-menu:not([hidden]) {
+    opacity: 0;
+    transform: scale(0.95) translateY(-4px);
+  }
+}
+
+.dropdown-item {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  padding: 0.65rem 0.8rem;
+  border-radius: var(--radius-control);
+  color: var(--color-fg);
+  text-align: left;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  transition:
+    background-color var(--motion-fast) ease,
+    color var(--motion-fast) ease;
+}
+
+.dropdown-item:hover,
+.dropdown-item:focus-visible {
+  background: var(--color-surface-muted);
+  outline: none;
+}
+
+/* --- Modals --- */
+.modal-backdrop {
+  position: fixed;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 100;
+  padding: var(--space-4);
+  background: var(--color-overlay);
+  backdrop-filter: blur(4px);
+  transition:
+    opacity 0.3s ease,
+    display 0.3s ease allow-discrete;
+  opacity: 1;
+}
+
+.modal-backdrop[hidden] {
+  display: none;
+  opacity: 0;
+}
+
+@starting-style {
+  .modal-backdrop:not([hidden]) {
+    opacity: 0;
+  }
+}
+
+.modal {
+  position: relative;
+  padding: var(--space-6);
+  width: 100%;
+  max-width: 28rem;
+  border-radius: var(--radius-surface);
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  box-shadow: var(--shadow-lg);
+  transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+  transform: scale(1) translateY(0);
+}
+
+.modal-close {
+  position: absolute;
+  top: var(--space-4);
+  right: var(--space-4);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 2rem;
+  height: 2rem;
+  border-radius: var(--radius-control);
+  color: var(--color-fg);
+  opacity: 0.5;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  transition: opacity var(--motion-fast) ease, background var(--motion-fast) ease;
+}
+
+.modal-close:hover {
+  opacity: 1;
+  background: var(--color-surface-muted);
+}
+
+.modal-close svg {
+  width: 1.25rem;
+  height: 1.25rem;
+}
+
+.modal-backdrop[hidden] .modal {
+  transform: scale(0.95) translateY(16px);
+}
+
+@starting-style {
+  .modal-backdrop:not([hidden]) .modal {
+    transform: scale(0.95) translateY(16px);
+  }
+}
+
+/* --- Toasts --- */
+.toast-container {
+  position: fixed;
+  bottom: 1rem;
+  right: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  z-index: 110;
+  pointer-events: none;
+}
+
+.toast {
+  padding: 1rem;
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  pointer-events: auto;
+  border-radius: var(--radius-control);
+  background: var(--color-surface);
+  color: var(--color-fg);
+  border: 1px solid var(--color-border);
+  box-shadow: var(--shadow-md);
+  min-width: 18.75rem;
+  animation: toast-slide-in 0.4s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+.toast[data-state="closing"] {
+  animation: toast-fade-out 0.3s ease forwards;
+}
+
+.toast-success {
+  border-left: 4px solid var(--color-success-solid);
+}
+
+.toast-error {
+  border-left: 4px solid var(--color-error-solid);
+}
+
+.toast-info {
+  border-left: 4px solid var(--color-info-solid);
+}
+
+@keyframes toast-slide-in {
+  from {
+    opacity: 0;
+    transform: translateX(100%) scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0) scale(1);
+  }
+}
+
+@keyframes toast-fade-out {
+  from {
+    opacity: 1;
+    transform: translateX(0) scale(1);
+  }
+  to {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+}

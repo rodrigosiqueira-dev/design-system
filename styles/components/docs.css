@@ -1,0 +1,69 @@
+.docs-shell {
+  display: grid;
+  gap: var(--space-6);
+}
+
+.docs-section {
+  display: grid;
+  gap: var(--space-4);
+}
+
+.docs-grid {
+  display: grid;
+  gap: var(--space-4);
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+}
+
+.docs-card {
+  padding: var(--space-5);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-surface);
+  background: var(--color-surface);
+  box-shadow: var(--shadow-sm);
+}
+
+.docs-title {
+  font-size: 1.4rem;
+  font-weight: 700;
+}
+
+.docs-subtitle {
+  font-size: 0.9rem;
+  opacity: 0.72;
+}
+
+.swatch {
+  display: grid;
+  gap: var(--space-3);
+}
+
+.swatch-chip {
+  height: 4rem;
+  border-radius: var(--radius-control);
+  border: 1px solid rgb(255 255 255 / 0.12);
+  box-shadow: inset 0 1px 0 rgb(255 255 255 / 0.12);
+}
+
+.token-list {
+  display: grid;
+  gap: 0.65rem;
+  font-size: 0.95rem;
+}
+
+.token-row {
+  display: flex;
+  justify-content: space-between;
+  gap: var(--space-3);
+  padding-bottom: 0.65rem;
+  border-bottom: 1px solid var(--color-border);
+}
+
+.token-name {
+  font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+  font-size: 0.82rem;
+}
+
+.brand-preview {
+  display: grid;
+  gap: var(--space-3);
+}

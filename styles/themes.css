@@ -1,0 +1,26 @@
+.dark {
+  --color-bg: var(--color-neutral-dark-2);
+  --color-fg: var(--color-neutral-light-2);
+  --color-border: oklch(0.32 0.01 264.488); /* Softer but visible border */
+
+  --color-surface: oklch(0.22 0.01 264.488);
+  --color-surface-muted: oklch(0.28 0.01 264.488);
+
+  /* Status Text for Dark Mode (High contrast versions) */
+  --color-success-text: oklch(0.85 0.12 145);
+  --color-error-text: oklch(0.85 0.12 25);
+  --color-warning-text: oklch(0.85 0.12 75);
+  --color-info-text: oklch(0.85 0.12 250);
+
+  /* Status Soft Backgrounds for Dark Mode (Subtle and deep) */
+  --color-success-soft: oklch(0.18 0.02 145);
+  --color-error-soft: oklch(0.18 0.02 25);
+  --color-warning-soft: oklch(0.18 0.02 75);
+  --color-info-soft: oklch(0.18 0.02 250);
+
+  --color-overlay: rgba(0, 0, 0, 0.9);
+
+  --shadow-sm: 0 1px 2px rgb(2 6 23 / 0.4), 0 1px 3px rgb(2 6 23 / 0.24);
+  --shadow-md: 0 10px 20px rgb(2 6 23 / 0.36), 0 3px 6px rgb(2 6 23 / 0.22);
+  --shadow-lg: 0 22px 45px rgb(2 6 23 / 0.48), 0 10px 18px rgb(2 6 23 / 0.28);
+}

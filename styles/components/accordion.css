@@ -1,0 +1,79 @@
+/* ==========================================================================
+   ACCORDION COMPONENT
+   ========================================================================== */
+
+.accordion {
+  width: 100%;
+  border-bottom: 1px solid var(--color-border);
+}
+
+.accordion-item {
+  border-top: 1px solid var(--color-border);
+}
+
+.accordion-trigger {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  padding: var(--space-4) 0;
+  font-weight: 500;
+  text-align: left;
+  background: transparent;
+  border: none;
+  color: var(--color-fg);
+  cursor: pointer;
+  transition: color var(--motion-fast) ease;
+}
+
+.accordion-trigger:hover {
+  color: var(--color-primary);
+  text-decoration: underline;
+}
+
+.accordion-trigger svg {
+  width: 1rem;
+  height: 1rem;
+  transition: transform var(--motion-normal) ease;
+  opacity: 0.7;
+}
+
+.accordion-trigger[aria-expanded="true"] svg {
+  transform: rotate(180deg);
+}
+
+/* Smooth transition using Grid rows */
+.accordion-content {
+  display: grid;
+  grid-template-rows: 0fr;
+  max-height: 0;
+  transition:
+    grid-template-rows var(--motion-normal) cubic-bezier(0.4, 0, 0.2, 1),
+    max-height var(--motion-normal) cubic-bezier(0.4, 0, 0.2, 1),
+    opacity var(--motion-normal) ease,
+    visibility var(--motion-normal) step-end;
+  overflow: hidden;
+  opacity: 0;
+  visibility: hidden;
+}
+
+.accordion-trigger[aria-expanded="true"] + .accordion-content {
+  grid-template-rows: 1fr;
+  max-height: 100vh;
+  opacity: 1;
+  visibility: visible;
+  transition:
+    grid-template-rows var(--motion-normal) cubic-bezier(0.4, 0, 0.2, 1),
+    max-height var(--motion-normal) cubic-bezier(0.4, 0, 0.2, 1),
+    opacity var(--motion-normal) ease,
+    visibility var(--motion-normal) step-start;
+}
+
+.accordion-inner {
+  min-height: 0;
+  padding: 0 0 var(--space-4) 0;
+  font-size: 0.9375rem;
+  color: color-mix(in oklch, var(--color-fg) 70%, transparent);
+  line-height: 1.6;
+  overflow: hidden;
+}
