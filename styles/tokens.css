@@ -25,11 +25,11 @@
 
   /* Neutrals */
   --color-neutral-dark-1: oklch(0 0 0);
-  --color-neutral-dark-2: oklch(0.173 0.0045 264.488);
-  --color-neutral-dark-3: oklch(0.293 0.016 264.488);
+  --color-neutral-dark-2: oklch(0.18 0.01 258);
+  --color-neutral-dark-3: oklch(0.293 0.016 258);
 
-  --color-neutral-light-1: oklch(0.92 0.005 264.488);
-  --color-neutral-light-2: oklch(0.985 0.003 264.488);
+  --color-neutral-light-1: oklch(0.935 0 0);
+  --color-neutral-light-2: oklch(0.985 0 0);
   --color-neutral-light-3: oklch(1 0 0);
 
   /* Status Colors */
@@ -61,8 +61,12 @@
   /* Semantic Mappings */
   --color-bg: var(--color-neutral-light-2);
   --color-fg: var(--color-neutral-dark-2);
+
+  /* Brand color */
   --color-primary: var(--color-purple-solid);
-  --color-border: oklch(0.92 0.01 240);
+
+  /* Border*/
+  --color-border: oklch(0.88 0.01 258 / 0.6);
 
   --color-success: var(--color-success-solid);
   --color-error: var(--color-error-solid);

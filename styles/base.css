@@ -33,18 +33,7 @@
 
 @layer utilities {
   .container {
-    width: 100%;
-    margin-left: auto;
-    margin-right: auto;
-    padding-left: var(--space-4);
-    padding-right: var(--space-4);
-    max-width: 1280px;
-  }
-
-  @media (min-width: 768px) {
-    .container {
-      padding-left: var(--space-6);
-      padding-right: var(--space-6);
-    }
+    width: min(100% - 32px, 80em);
+    margin-inline: auto;
   }
 }

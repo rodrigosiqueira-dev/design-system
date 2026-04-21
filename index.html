@@ -246,6 +246,48 @@
                   </svg>
                 </button>
               </div>
+              <div class="alert alert-warning">
+                <span>Aviso de atenção!</span>
+                <button
+                  class="alert-close"
+                  data-alert-close
+                  aria-label="Fechar"
+                >
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  >
+                    <line x1="18" y1="6" x2="6" y2="18"></line>
+                    <line x1="6" y1="6" x2="18" y2="18"></line>
+                  </svg>
+                </button>
+              </div>
+              <div class="alert alert-info">
+                <span>Informação importante!</span>
+                <button
+                  class="alert-close"
+                  data-alert-close
+                  aria-label="Fechar"
+                >
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  >
+                    <line x1="18" y1="6" x2="6" y2="18"></line>
+                    <line x1="6" y1="6" x2="18" y2="18"></line>
+                  </svg>
+                </button>
+              </div>
               <div class="alert alert-success">
                 <span>Operação realizada com sucesso!</span>
                 <button
@@ -290,11 +332,12 @@
               </div>
             </div>
           </div>
-
           <div class="docs-card">
             <h2 class="font-semibold mb-4">Badges</h2>
             <div class="flex gap-2">
               <span class="badge">Default</span>
+              <span class="badge badge-warning">Aviso</span>
+              <span class="badge badge-info">Info</span>
               <span class="badge badge-success">OK</span>
               <span class="badge badge-error">Erro</span>
             </div>
@@ -408,7 +451,7 @@
         <article class="container docs-grid">
           <div class="docs-card">
             <h2 class="font-semibold mb-4">Tooltip (CSS Puro)</h2>
-            <div class="flex gap-4">
+            <div class="flex flex-wrap gap-4">
               <button
                 class="btn btn-secondary btn-md"
                 data-tooltip="Acessível via tab também!"
