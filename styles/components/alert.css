@@ -10,7 +10,7 @@
   flex-direction: row;
   align-items: center;
   gap: var(--space-3);
-  transition: 
+  transition:
     opacity var(--motion-normal) ease,
     transform var(--motion-normal) ease,
     margin var(--motion-normal) ease,
@@ -46,14 +46,19 @@
   background: transparent;
   border: none;
   cursor: pointer;
-  transition: opacity var(--motion-fast) ease, background var(--motion-fast) ease;
+  transition:
+    opacity var(--motion-fast) ease,
+    background var(--motion-fast) ease;
 }
 
 .alert-close:hover {
   opacity: 1;
   background: rgba(0, 0, 0, 0.05);
 }
-
+.alert-close:focus-visible {
+  outline: 2px solid var(--color-focus-ring);
+  outline-offset: 2px;
+}
 .dark .alert-close:hover {
   background: rgba(255, 255, 255, 0.1);
 }

@@ -84,7 +84,7 @@
 
   --color-overlay: rgb(15 23 42 / 0.56);
 
-  --color-text-inverse: white;
+  --color-text-inverse: #fff;
 
   --color-focus-ring: color-mix(
     in oklch,
@@ -96,6 +96,9 @@
     var(--color-error) 28%,
     transparent
   );
+
+  /* --color-focus-ring: none;
+  --color-focus-ring-error: none; */
 
   --shadow-sm: 0 1px 2px rgb(15 23 42 / 0.08), 0 1px 3px rgb(15 23 42 / 0.06);
   --shadow-md: 0 10px 20px rgb(15 23 42 / 0.08), 0 3px 6px rgb(15 23 42 / 0.06);
