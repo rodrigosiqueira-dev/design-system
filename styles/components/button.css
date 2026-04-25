@@ -26,10 +26,6 @@
 }
 
 /* --- Interactive States --- */
-.btn:hover {
-  filter: brightness(1.05);
-}
-
 .btn:active {
   transform: translateY(1px);
 }
@@ -70,15 +66,21 @@
   background: var(--color-primary);
   color: var(--color-text-inverse);
 }
+.btn-primary:hover {
+  background: var(--color-primary-alt);
+}
 
 /* Secondary */
 .btn-secondary {
-  background: var(--color-surface-muted);
+  background: var(--color-secondary);
   color: var(--color-fg);
   border-color: var(--color-border);
 }
+.btn-secondary:hover {
+  background: var(--color-secondary-alt);
+}
 
-/* Danger (Shadcn style) */
+/* Danger */
 .btn-danger {
   color: var(--color-error-solid);
   background: color-mix(in oklch, var(--color-error-solid) 10%, transparent);

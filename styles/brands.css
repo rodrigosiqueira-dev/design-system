@@ -1,5 +1,6 @@
 :root[data-brand="ocean"] {
-  --color-primary: oklch(0.56 0.25 261);
+  --color-primary: oklch(0.47 0.29 262);
+  --color-primary-alt: oklch(0.35 0.24 262);
   --color-info: oklch(0.68 0.11 230);
   --radius-control: 0.5rem;
   --radius-surface: 1rem;
@@ -8,6 +9,7 @@
 :root[data-brand="sunset"] {
   --font-family-sans: "Inter", sans-serif;
   --color-primary: oklch(0.68 0.21 28);
+  --color-primary-alt: oklch(0.56 0.17 28);
   --color-warning: oklch(0.8 0.17 75);
   --color-error: oklch(0.64 0.24 18);
   --radius-control: 0.9rem;
@@ -17,6 +19,7 @@
 :root[data-brand="forest"] {
   --font-family-sans: "Mulish", sans-serif;
   --color-primary: oklch(0.54 0.15 154);
+  --color-primary-alt: oklch(0.42 0.13 154);
   --color-success: oklch(0.62 0.18 150);
   --color-info: oklch(0.56 0.08 195);
   --radius-control: 0.4rem;

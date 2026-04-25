@@ -16,16 +16,16 @@
 
 .input:focus {
   border-color: var(--color-primary);
-  box-shadow: 0 0 0 2px var(--color-focus-ring);
+  /* box-shadow: 0 0 0 2px var(--color-focus-ring); */
 }
 
 .input-error {
   border-color: var(--color-error-solid);
 }
 
-.input-error:focus {
+/* .input-error:focus {
   box-shadow: 0 0 0 2px var(--color-focus-ring-error);
-}
+} */
 
 .input-success {
   border-color: var(--color-success-solid);

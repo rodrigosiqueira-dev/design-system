@@ -1,10 +1,14 @@
 .dark {
   --color-bg: var(--color-neutral-dark-2);
   --color-fg: var(--color-neutral-light-2);
-  --color-border: oklch(0.38 0.02 258 / 0.7); /* Softer but visible border */
+  --color-border: oklch(0.38 0.017 262);
 
-  --color-surface: oklch(0.2 0.01 258);
-  --color-surface-muted: oklch(0.28 0.01 258);
+  --color-surface: var(--color-neutral-dark-3);
+  --color-surface-muted: oklch(0.3 0.01 262);
+  --color-surface-muted-alt: oklch(0.35 0.01 262);
+
+  --color-secondary: var(--color-surface-muted);
+  --color-secondary-alt: oklch(0.35 0.01 262);
 
   /* Status Text for Dark Mode (High contrast versions) */
   --color-success-text: oklch(0.85 0.12 145);
